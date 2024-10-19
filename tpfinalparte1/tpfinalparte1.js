@@ -57,7 +57,7 @@ function draw() {
      
   
     if (!cancionReproduciendose) {
-      cancion.loop(); /ñ
+      cancion.loop(); 
       cancionReproduciendose = true;  }
 
   
