@@ -55,16 +55,10 @@ function draw() {
      text("Juan Canale", 60, 40 );
      text("Gaspar Bernal", 66, 60 );
      
-     //  // Solo reproducir la canción si no está ya en reproducción
-     //if (!cancionReproduciendose) {
-     //  cancion.play();
-     //  cancionReproduciendose = true;  // Evitar que se reproduzca más de una vez
-     //}
-      // Solo reproducir la canción si no está ya en reproducción
+  
     if (!cancionReproduciendose) {
-      cancion.loop(); // Cambia a loop
-      cancionReproduciendose = true;  // Evitar que se reproduzca más de una vez
-    }
+      cancion.loop(); /ñ
+      cancionReproduciendose = true;  }
 
   
 
