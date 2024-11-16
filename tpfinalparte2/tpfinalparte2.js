@@ -1,0 +1,51 @@
+//https://www.youtube.com/watch?v=M-4_OaQyq0E&ab_channel=GaspiB
+//BERNAL GASPAR. JUAN CANALE
+let jugador;
+let laberinto;
+let estadoJuego = 'inicio';
+let tiempoCreditos = 0;
+let Imagen0, Imagen1;
+let escalaX = 640 / 400;
+let escalaY = 480 / 400;
+let cancion;
+let cancionReproduciendose = false;
+
+function preload() {
+  Imagen0 = loadImage('Data/inicio.png');
+  Imagen1 = loadImage('Data/fin.png');
+  soundFormats('mp3', 'ogg');
+  cancion = loadSound('Data/RickAudio.mp3');
+}
+
+function setup() {
+  createCanvas(640, 480);
+  jugador = new Jugador(50, 50);
+  laberinto = new Laberinto();
+}
+
+function draw() {
+  background(236, 159, 53);
+
+  if (estadoJuego === 'inicio') {
+    mostrarPantallaInicio();
+  } else if (estadoJuego === 'jugando') {
+    jugar();
+  } else if (estadoJuego === 'creditos') {
+    mostrarCreditos();
+  }
+}
+
+function keyPressed() {
+  if (key === ' ' && estadoJuego === 'inicio') {
+    estadoJuego = 'jugando';
+
+    if (!cancionReproduciendose) {
+      cancion.loop(); 
+      cancionReproduciendose = true;
+    }
+  }
+  if (key === 'r' && estadoJuego === 'creditos') {
+    estadoJuego = 'inicio';
+    tiempoCreditos = 0;
+  }
+}
