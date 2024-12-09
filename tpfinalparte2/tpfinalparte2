@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=M-4_OaQyq0E&ab_channel=GaspiB
+//https://www.youtube.com/watch?v=M-4_OaQyq0E&ab_channel=GaspiB
 let jugador;
 let laberinto;
 let estadoJuego = 'inicio';
